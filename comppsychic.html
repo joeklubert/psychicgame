@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html>
+<html lang= "en-US">
+<head>
+	<meta charset= "UTF-8">
+	<title>CompPsychic</title>
+	<!--<script src="comppsychic.js"></script>-->
+	<link rel="stylesheet" href="comppsychic.css">
+	
+    
+
+
+	
+</head>
+<body>
+
+	<!--<div id="game">-->
+
+	<h1>Computer Psychic???</h1>
+
+	<h2>Try to read my mind! Select a letter and see if you can!</h2>
+
+
+	
+	<!--<div id="guessbox"></div>-->
+  <div id="buttons"></div>
+ <!-- <button id="clear">clear</button>-->
+  <button2 id="letterBtn"></button2>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type="text/javascript">
+
+
+  	var letters = ["a", "b","c","d","e","f", "g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+	for (var i = 0; i < letters.length; i++) {
+
+		var letterBtn = $("<button>");
+		 letterBtn.addClass("letter-button letter letter-button-color");
+		 letterBtn.attr("data-letter", letters[i]);
+		 letterBtn.text(letters[i]);
+		  $("#buttons").append(letterBtn);
+		  //console.log(letters[i]);
+
+		}
+
+
+
+		var computerChoices = ["a", "b", "c"];
+
+
+		var wins = 0;
+   		var losses = 0;
+    	
+
+
+
+		var computerChoices = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+		console.log(computerChoices);
+
+
+
+
+		document.onclick = function(event) {
+			var letterBtn = event.key;
+
+			if ((letterBtn === "a") || (letterBtn === "b") || (letterBtn === "c")) {
+
+        // If we choose rock and the computer guesses scissors, increment our wins variable.
+        if ((letterBtn === "a") && (computerChoices === "a")) {
+          wins++;
+        
+
+    
+
+        
+
+        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
+        var html =
+          "<p>You chose: " + letterBtn + "</p>" +
+          "<p>The computer chose: " + computerChoices + "</p>" +
+          "<p>wins: " + wins + "</p>" +
+          "<p>losses: " + losses + "</p>" +
+          
+
+        /* Set the inner HTML contents of the #game div to our html string
+        document.querySelector("#game").innerHTML = html;//
+     // }
+   // };
+
+		
+			
+
+
+
+
+
+		
+
+
+
+	
+
+		
+
+	
+
+		/*var letterBtn = document.getElementbyId("letterBtn").innerHTML = "Guess again";
+
+		function myFunction() {
+
+			/*var letterBtn = document.getElementbyId("letterBtn").innerHTML = "Guess again";
+			
+			//var text;
+		
+
+			if (guess === "a", "b", "c") {
+
+				document.write ("You read my mind!!");
+
+			
+			}
+		
+
+			if (letter != "a" "b" "c") {
+
+				document.write ("Guess again!");
+
+
+				
+
+			}*/
+
+
+		
+
+
+
+		
+
+
+
+
+
+		//var computerChoices = ["a", "b","c"];
+
+		/*var wins= 0;
+		var losses = 0;*/
+
+		/*document.onkeyup = function(event) {
+
+			var letterButton = event.key;
+			var computerChoices = computerChoices[Math.floor(Math.random() * computerChoices)];
+			var txt;
+			var letterButton = prompt("You read my mind!");
+
+			if (letterButton === computerChoices) {
+
+
+			}
+
+
+
+
+
+
+		
+
+
+
+		
+		$(".letter-button").on("click", function() {
+			var guess = $("<div>");
+			guess.addClass("letter guess-color");
+			guess.text($(this).attr("data-letter"));
+			$("#guessbox").append(guess);
+			console.log(letters[i]);
+
+			
+
+	
+     	 
+
+		$("#guessbox").append(guess);
+
+	
+      };
+
+		$("#clear").on("click", function() {
+
+			$("#guessbox").empty();
+      });*/
+
+		
+    
+	
+
+
+</script>
+
+</body>
+</html>
+	
+
+   
+
+
+	
+
+	
+
+
+
